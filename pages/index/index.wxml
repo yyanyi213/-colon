@@ -1,0 +1,36 @@
+<!--index.wxml-->
+<view>
+  <view class='container1'>
+    <view class="edit {{iseditnull?'e-have':'e-null'}}" bindtap='hint'>
+      <text>白山羊备忘录</text>
+    </view>
+    <view class="edit {{iseditnull?'e-null':'e-have'}}" bindtap='edit'>
+      <text>编辑</text>
+    </view>
+    <text class="edit {{iseditnull?'e-null':'e-have'}}">共{{allLength}}条记录</text>
+    <view class='tj' bindtap='toadd'>
+      <text>添加</text>
+    </view>
+  </view>
+
+  <view class="record {{isrecordnull?'r-null':'r-have'}}" bindtap='toadd'>
+    <text>暂无记录,点击可添加</text>
+  </view>
+  <!-- 显示已有记录 -->
+  <checkbox-group bindchange='delMemo'>
+    <view wx:for="{{memoList}}" class="checkbox {{ischeckboxnull?'c-null':'c-have'}}">
+      <checkbox value='{{index}}' /> {{item.title}} {{item.time}}
+    </view>
+
+  </checkbox-group>
+
+  <view wx:for="{{memoList}}" class="checkbox {{ischeckboxnull?'c-have':'c-null'}}">
+    <navigator url="../edit/edit?id={{index}}&title={{item.title}}&content={{item.content}}" open-type="redirect">
+      <text class='title'>{{item.title}}</text>
+      <text class='time'>{{item.time}}</text>
+    </navigator>
+  </view>
+
+  <!--del all record button-->
+  <button bindtap='{{delFun}}' class="{{isdelAllnull?'e-null':'e-have'}}">{{btnText}}</button>
+</view>

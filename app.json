@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/add/add",
+    "pages/logs/logs",
+  
+    "pages/edit/edit"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3CD500",
+    "navigationBarTitleText": "备忘录",
+    "navigationBarTextStyle": "black"
+  }
+}

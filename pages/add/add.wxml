@@ -1,0 +1,10 @@
+<view class='container1'>
+  <view bindtap='back'><text>返回</text></view>
+  <view class='tj' bindtap='save'><text>保存</text></view>
+</view>
+<view class='line'></view>
+<view class='container2'>
+  <textarea placeholder='输入标题' bindinput='inputtitle'></textarea>
+   <view class='line'></view> 
+  <textarea placeholder='输入备忘录内容' bindinput='inputcontent'></textarea>
+</view>

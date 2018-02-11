@@ -1,0 +1,23 @@
+<!--pages/edit/edit.wxml-->
+
+<view class='container1'>
+  <view bindtap='back'>
+    <text>返回</text>
+  </view>
+  <view class='delsave'>
+    <view class='tj' bindtap='del'>
+      <text>删除</text>
+    </view>
+    <view class='tj' bindtap='save'>
+      <text>保存</text>
+    </view>
+  </view>
+</view>
+<view class='line'></view>
+<view>
+  <view class='container2'>
+    <textarea placeholder='编辑标题' bindinput='inputtitle' value="{{title}}"/>
+    
+    <textarea placeholder='编辑备忘录内容' bindinput='inputcontent' value="{{content}}"/>
+  </view>
+</view>
